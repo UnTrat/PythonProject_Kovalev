@@ -8,7 +8,7 @@ while a == True:
             if num//10 >= 1 and num//10 <=10:
             # Перестановка чисел
                 a, b = divmod(num, 10)
-                print(b, a, sep="")
+                print(b*10 + a)
                 a = False
                 break
             else:
