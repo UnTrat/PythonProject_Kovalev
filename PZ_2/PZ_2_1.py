@@ -1,6 +1,6 @@
 # Вариант 13. Дано двузначное число. Вывести число, полученное при перестановке цифр исходного числа 
-a = True
-while a == True:
+Cycle = True
+while Cycle == True:
     try:
         while True:
             num = int(input("Введите двузнаачное число: "))
@@ -9,7 +9,7 @@ while a == True:
             # Перестановка чисел
                 a, b = divmod(num, 10)
                 print(b*10 + a)
-                a = False
+                Cycle = False
                 break
             else:
                 continue
