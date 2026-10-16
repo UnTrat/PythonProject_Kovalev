@@ -4,11 +4,11 @@
 while True:
     try:
         A, B, C = int(input("Введите число A: ")), int(input("Введите число B: ")), int(input("Введите число C: "))
-        if (A>0) or (B>0) or (C>0):
-            print("Хотя бы 1 число положительное")
-            break
-        else:
-            print("Нет положительных чисел")
     except ValueError:
         print("Что-то пошло не так")
         continue
+    if (A>0) or (B>0) or (C>0):
+        print("Хотя бы 1 число положительное")
+        break
+    else:
+        print("Нет положительных чисел")

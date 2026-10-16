@@ -6,13 +6,13 @@
 while True:
     try:
         year = int(input("Введите номер года"))
-        if year%100==0 and year%400>0:
-            print("В",year, "году 365 дней")
-        elif year%4==0:
-            print("В",year, "году 366 дней")
-        else:
-            print("В", year, "году 365 дней")
-        break
     except ValueError:
         print("Что-то пошло не так")
         continue
+    if year%100==0 and year%400>0:
+        print("В",year, "году 365 дней")
+    elif year%4==0:
+        print("В",year, "году 366 дней")
+    else:
+        print("В", year, "году 365 дней")
+    break
