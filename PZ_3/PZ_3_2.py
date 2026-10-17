@@ -3,16 +3,20 @@
 #Високосным считается год, делящийся на 4, за исключением тех годов, которые
 #делятся на 100 и не делятся на 400 (например, годы 300, 1300 и 1900 не являются
 #високосными, а 1200 и 2000 — являются).
-while True:
+
+
+year = input("Введите номер года: ")
+
+while type(year) != int:
     try:
-        year = int(input("Введите номер года"))
+        year = int(year)
     except ValueError:
-        print("Что-то пошло не так")
-        continue
-    if year%100==0 and year%400>0:
-        print("В",year, "году 365 дней")
-    elif year%4==0:
-        print("В",year, "году 366 дней")
-    else:
-        print("В", year, "году 365 дней")
-    break
+        print("Неправильно ввели!")
+        year = input("Введите номер года: ")
+
+if year%100==0 and year%400>0:
+    print("В",year, "году 365 дней")
+elif year%4==0:
+    print("В",year, "году 366 дней")
+else:
+    print("В", year, "году 365 дней")
