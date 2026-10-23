@@ -25,8 +25,3 @@ while try_count != N:
     print(A)
     A *= B
     try_count += 1
-
-
-
-
-
