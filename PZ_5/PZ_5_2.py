@@ -7,9 +7,9 @@ def ShiftRight3(a, b, c):
     f = a 
     g = b 
     h = c
-    a = g
-    b = h
-    c = f
+    a = h
+    b = f
+    c = g
     return a,b,c
 A1, B1, C1 = input("Введите число A1: "), input("Введите число B1: "), input("Введите число C1: ")
 while type(A1) != float:
