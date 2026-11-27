@@ -6,20 +6,19 @@ Listik = []
 N = int(input("Введите размер списка: "))
 for i in range(N):
     Listik.append(random.randint(-4, 4))
-def chetn(A):
-    B = []
-    for i in range(len(A)):
-        if A[i] % 2 ==0:
-            B.append(A[i])
-    B.sort()
-    return B
-def nechetn(A):
-    C = []
-    for i in range(len(A)):
-        if A[i] % 2 !=0:
-            C.append(A[i])
-    C.sort()
-    return C
+def func(A):   
+    def nechetn(A):
+        B = []
+        for i in range(len(A)):
+            if i % 2 ==0:
+                B.append(A[i])
+        return B
+    def chetn(A):
+        C = []
+        for i in range(len(A)):
+            if i % 2 !=0:
+                C.append(A[i])    
+        return C
+    print(chetn(A),nechetn(A))
 print(Listik)
-print(chetn(Listik))
-print(nechetn(Listik))
+func(Listik)

@@ -6,15 +6,14 @@ import random
 listt = []
 R = int(input("число R: "))
 N = int(input("Размер списка: "))
-
 for i in range(N):
     listt.append(random.randint(-4, 4))
 def poisk(a, r):
-    best_dist = 0
+    best_dist = abs(a[0] + a[1] - r)
     best_index = 0
     dist = 0
     for i in range(1, len(a)-1):
-        dist == a[i] + a[i+1] - r
+        dist = abs(a[i] + a[i+1] - r)
         if dist < best_dist:
             best_dist = dist
             best_index = i
